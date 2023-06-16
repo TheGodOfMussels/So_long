@@ -60,9 +60,9 @@ void	check_error(t_game *g)
 	g->tmp = NULL;
 	g->map = NULL;
 	if (ft_checkset("10PCEG\n", g->mapstr) == 0)
-		map_error("Invalid char type!", g, 0);
+		map_error("Invalid char type!", g, 1);
 	if (check_char(g) == 0)
-		map_error("map must have at least 1E, 1P & 1C!", g, 0);
+		map_error("map must have at least 1E, 1P & 1C!", g, 1);
 	g->map = ft_split(g->mapstr, '\n');
 	g->tmp = ft_split(g->mapstr, '\n');
 	g->win.x = ft_strlen(g->map[0]);
